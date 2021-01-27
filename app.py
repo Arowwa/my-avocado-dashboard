@@ -31,7 +31,7 @@ app.layout = html.Div(
                 html.P(
                     children="Analyze the behavior of avocado prices"
                     " and the number of avocados sold in the US"
-                    " between 2015 and 2018",
+                    " between 2015 and 2020",
                     className="header-description",
                 ),
             ],
