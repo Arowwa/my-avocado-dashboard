@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 from dash.dependencies import Output, Input
 
-data = pd.read_csv("avocado.csv")
+data = pd.read_csv("dataset-updated-2020.csv")
 data["Date"] = pd.to_datetime(data["Date"], format="%Y-%m-%d")
 data.sort_values("Date", inplace=True)
 
@@ -130,7 +130,7 @@ def update_charts(region, avocado_type, start_date, end_date):
         "data": [
             {
                 "x": filtered_data["Date"],
-                "y": filtered_data["AveragePrice"],
+                "y": filtered_data["average_price"],
                 "type": "lines",
                 "hovertemplate": "$%{y:.2f}<extra></extra>",
             },
@@ -151,7 +151,7 @@ def update_charts(region, avocado_type, start_date, end_date):
         "data": [
             {
                 "x": filtered_data["Date"],
-                "y": filtered_data["Total Volume"],
+                "y": filtered_data["total_volume"],
                 "type": "lines",
             },
         ],
